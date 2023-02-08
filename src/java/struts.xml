@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+    <package name="technosoft" namespace="/" extends="struts-default">
+        
+        <action name="loadpage">
+            <result>home.jsp</result>
+        </action>
+        
+        <action name="signupaction" class="struts.action.CodeAction">
+            <result name="success">homepage.jsp</result>
+        </action>
+        
+        <action name="loginaction" class="struts.action.CodeAction" method="signIn">
+            <result name="error">homepage.jsp</result>
+            <result name="success">NextPage.jsp</result>
+        </action>
+        
+        <action name="pwchangeaction" class="struts.action.CodeAction" method="updatePw">
+            <result name="error">homepage.jsp</result>
+            <result name="success">homepage.jsp</result>
+        </action>
+    </package>
+</struts>
+

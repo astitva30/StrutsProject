@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="hib.struts.dto">
+    <class name="User" table="newstrutsusertable">
+        <id name="serialNo">
+            <generator class="native"/>
+        </id>
+        <property  name="userID"/>
+        <property name="pass"/>
+        <property name="fNm"/>   
+        <property name="mail"/>
+        <property name="contact"/>
+        <property name="address"/>
+        <property name="city"/>    
+        <property name="dOB"/>
+        <property name="time"/> 
+        <property name="gender"/>
+        <property name="hobbies"/> 
+        <property name="photo"/>             
+    </class>
+</hibernate-mapping>
